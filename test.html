@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Dots in Slick Carousel</title>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <style>
+      /* Custom styling for slick dots */
+      .slick-dots li {
+        width: 10px; /* Width of inactive dots */
+        height: 10px;
+        margin: 0 5px;
+        transition: width 0.3s ease; /* Smooth transition */
+      }
+
+      /* Style for the dots button */
+      .slick-dots li button:before {
+        font-size: 0; /* Hide default dot */
+        content: ""; /* Create custom dot with pseudo-element */
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: gray;
+        border-radius: 5px;
+      }
+
+      /* Dot for active slide */
+      .slick-dots li.slick-active {
+        width: 30px; /* Make the active dot wider */
+      }
+      .slick-dots li.slick-active button:before {
+        background-color: black; /* Change color of active dot */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div>
+        <img
+          src="./assets/card_img/card_1.jpg"
+          alt="Image 1"
+          style="width: 100%"
+        />
+      </div>
+      <div>
+        <img
+          src="./assets/card_img/card_1.jpg"
+          alt="Image 2"
+          style="width: 100%"
+        />
+      </div>
+      <div>
+        <img
+          src="./assets/card_img/card_1.jpg"
+          alt="Image 3"
+          style="width: 100%"
+        />
+      </div>
+      <div>
+        <img
+          src="./assets/card_img/card_1.jpg"
+          alt="Image 4"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+
+    <!-- <div class="slider_container w-full h-full mt-10">
+    <div class="w-full h-20 bg-slate-500">p</div>
+    <div class="w-full h-20 bg-green-500">p</div>
+    <div class="w-full h-20 bg-red-500"></div>
+    <div class="w-full h-20 bg-sky-500"></div>
+    <div class="w-full h-20 bg-pink-500"></div>
+  </div> -->
+
+    <section class="tags_container px-5 md:px-10 mt-5 relative">
+      <div class="mobile_tags lg:hidden block">
+        <div class="card_tags grid grid-cols-2 gap-2 w-full">
+          <p class="tags text-slate-700">#Dikaviral</p>
+          <p class="tags text-slate-700 border border-lime-200">#Dika20detik</p>
+          <p class="tags border-indigo-300 text-slate-700">#bogorberencana</p>
+          <p class="tags border-emerald-300 text-slate-700">#everestbagus!</p>
+        </div>
+        <div class="card_tags grid grid-cols-2 gap-2 w-full">
+          <p class="tags text-slate-700">#Dikaviral</p>
+          <p class="tags text-slate-700 border border-lime-200">#Dika20detik</p>
+          <p class="tags border-indigo-300 text-slate-700">#bogorberencana</p>
+          <p class="tags border-emerald-300 text-slate-700">#everestbagus!</p>
+        </div>
+      </div>
+
+      <div class="large_tags_container hidden lg:block">
+        <div class="large_tags gap-2 justify-between">
+          <p class="tags border-orange-300 text-slate-700">#aslikarawang</p>
+          <p class="tags text-slate-700">#Dikaviral</p>
+          <p class="tags text-slate-700 border-lime-200">#Dika20detik</p>
+          <p class="tags text-slate-700 border-lime-200">#Dika20detik</p>
+          <p class="tags border-indigo-300 text-slate-700">#bogorberencana</p>
+          <p class="tags border-indigo-300 text-slate-700">#bogorberencana</p>
+          <p class="tags border-emerald-300 text-slate-700">#everestbagus!</p>
+          <p class="tags border-emerald-300 text-slate-700">#everestbagus!</p>
+        </div>
+
+        <button
+          id="next_tags"
+          class="btn_control rounded-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-800 bg-white"
+        >
+          <i class="ph-bold ph-caret-right"></i>
+        </button>
+        <div
+          class="penutup_kanan w-[48px] h-[48px] absolute right-[50px] top-1/2 transform -translate-y-1/2"
+          style="
+            background: rgb(2, 0, 36);
+            background: linear-gradient(
+              90deg,
+              rgba(2, 0, 36, 0) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+        ></div>
+        <button
+          id="prev_tags"
+          class="btn_control absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-gray-800"
+        >
+          <i class="ph-bold ph-caret-left"></i>
+        </button>
+        <div
+          class="penutup_kiri w-[48px] h-[48px] absolute left-[50px] top-1/2 transform -translate-y-1/2"
+          style="
+            background: rgb(2, 0, 36);
+            background: linear-gradient(
+              -90deg,
+              rgba(2, 0, 36, 0) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+        ></div>
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true, // Enable dots
+          arrows: false, // Hide arrows
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      });
+
+      let hewan = ["Ayam", "Buaya", "Cicak", "Domba"];
+
+      // Buat kode kamu di bawah ini
+      hewan.forEach((item) => {
+        if (item) {
+          console.log(item);
+        }
+      });
+    </script>
+  </body>
+</html>

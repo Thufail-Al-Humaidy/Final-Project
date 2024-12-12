@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Permission</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .vector-image {
+        max-width: 400px;
+        margin-bottom: 2rem;
+      }
+      .back-button {
+        margin-top: 1.5rem;
+      }
+      h2 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body class="p-10">
+    <div class="container">
+      <a href="https://storyset.com/communication" target="_blank">
+        <img
+          src="./assets/images/Notify-amico.png"
+          alt="No Permission Vector"
+          class="vector-image"
+        />
+      </a>
+      <h1>Upss! Kamu Gak Punya Akses</h1>
+      <p>Kamu tidak memiliki akses untuk halaman ini</p>
+      <div class="d-flex gap-2 back-button align-items-center justify-content-center">
+        <a href="./views/auth-page.php" class="main-btn primary-btn btn-hover"
+          >Login</a
+        >
+        <a href="index.php" class="main-btn light-btn btn-hover"
+          >Kembali</a
+        >
+      </div>
+    </div>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

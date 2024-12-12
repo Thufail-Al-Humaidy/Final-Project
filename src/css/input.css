@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Poppins-Regular', sans-serif;
+    src: url(../../assets/font/Poppins/Poppins-Regular.ttf);
+}
+
+@layer components {
+    .top_mobile_container{
+        @apply flex gap-2 md:flex-col
+    }
+    .menu_mobile{
+        @apply bg-slate-300 rounded-md w-[48px] h-[48px] grid place-items-center lg:hidden
+    }
+    .icon_bookmark{
+        @apply bg-slate-300 rounded-md w-[48px] h-[48px] grid place-items-center
+    }
+    .search_mobile{
+        @apply bg-slate-300 rounded-md p-1 grid place-content-between place-items-center col-span-3
+    }
+    .mobile_navigation{
+        @apply md:hidden flex w-full justify-center fixed bottom-0 left-0 shadow-lg
+    }
+    .sb_option{
+        @apply flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300
+    }
+    .btn_option{
+        @apply w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300
+    }
+    .search_lg{
+        @apply hidden lg:flex items-center justify-between px-4 py-2 bg-gray-300 rounded-md
+    }
+    .nav_lg{
+        @apply lg:flex lg:justify-between lg:items-center shadow-md p-5 md:px-10 border
+    }
+    .btn_control{
+        @apply w-10 h-10 bg-slate-300 grid place-items-center p-3 rounded-lg
+    }
+    .judul{
+        @apply bg-slate-200/50 w-auto px-3 py-7 rounded-md absolute bottom-5 left-5 right-5
+    }
+    .tags{
+        @apply border border-cyan-800 text-slate-100 font-semibold py-2 px-3 rounded-md
+    }
+    .popular_tag{
+        @apply border rounded-md py-4 px-3 flex justify-between items-center
+    }
+    .card_category{
+        @apply shadow-sm hover:shadow-lg bg-white rounded-md flex items-center gap-3 overflow-hidden cursor-pointer relative h-24
+    }
+    .rate_btn{
+        @apply w-auto h-10 p-2 flex items-center gap-2
+    }
+}

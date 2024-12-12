@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    transition: all 300ms;
+    font-family: 'Poppins';
+}
+.selected 
+{
+    background-color: #ef4444; /* Warna merah */
+    color: aliceblue;
+    font-weight: medium;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+/* .slick-slide {
+    margin: 0 10px;
+} */
+.carrousel_post .slick-slide {
+    margin: 0 10px;
+}
+.large_tags{
+    display: none;
+}
+.slick-dots{
+    position: absolute;
+    bottom: 50px;
+}
+.slick-dots li {
+    width: 10px; 
+    height: 10px;
+    margin: 0 5px;
+    transition: width 0.3s ease;
+}
+
+  /* Style for the dots button */
+.slick-dots li button:before {
+    font-size: 0;
+    content: ''; 
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: black;
+    border-radius: 5px;
+}
+.slick-dots li.slick-active {
+    width: 30px;
+}
+slick-dots li.slick-active button:before {
+    background-color: black;
+}
+.judul{
+    translate: (-50%, -50%);
+}
+.disable{
+    color: #c6ced8;
+    cursor: not-allowed;
+}
+.card_tags {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important; 
+}
+
+.title_footer{ position: relative; }
+
+.mega_news .title_footer,
+.news_letters .title_footer,
+.sosmed_footer .title_footer{
+    z-index: 2;
+}
+
+.title_footer::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #f97316;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.8;
+}
+#editor{
+    width: 100%;
+    height: 377px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+
+/* @media (min-width: 425px) {
+    #next_tags,
+    #prev_tags,
+    .penutup_kanan,
+    .penutup_kiri{
+        display: none;
+    }
+} */
+
+ @media (min-width: 1024px) {
+    .large_tags{
+        display: flex;
+    }
+    .card_tags{
+        display: none !important;
+    }
+    .right_footer{
+        flex-direction: column;
+    }
+    #editor{
+        height: 295px;
+    }
+ }
+
+ @media (min-width: 1440px) {
+    .right_footer{
+        flex-direction: row;
+    }
+ }
+ 
+
